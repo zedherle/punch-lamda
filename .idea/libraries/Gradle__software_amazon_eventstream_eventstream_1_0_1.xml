@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: software.amazon.eventstream:eventstream:1.0.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.eventstream/eventstream/1.0.1/6ff8649dffc5190366ada897ba8525a836297784/eventstream-1.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.eventstream/eventstream/1.0.1/bbb6bb7dcb44dd6d9d85b3ad835cdd296f929d06/eventstream-1.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.eventstream/eventstream/1.0.1/7121512c9d99c6b4c6e7a6a858bb05cb2643d6b3/eventstream-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

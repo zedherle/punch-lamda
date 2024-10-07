@@ -1,0 +1,48 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'Punches
+
+  Sample SAM Template for Punches with production-ready considerations
+
+  '
+Globals:
+  Function:
+    Timeout: 20
+    MemorySize: 128
+    Runtime: java11
+Resources:
+  PunchFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: s3://aws-sam-cli-managed-default-samclisourcebucket-90bxkhvrr3u0/7018003dbf4d6c4a8d11fbd8b5f5ccee
+      Handler: punchworld.App::handleRequest
+      Events:
+        GetPunch:
+          Type: Api
+          Properties:
+            Path: /api/v1/punches
+            Method: get
+        PostPunch:
+          Type: Api
+          Properties:
+            Path: /api/v1/punches
+            Method: post
+    Metadata:
+      SamResourceId: PunchFunction
+Outputs:
+  PunchApi:
+    Description: API Gateway endpoint URL for Prod stage
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/api/v1/punches
+  PunchFunction:
+    Description: Hello World Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - PunchFunction
+      - Arn
+  PunchFunctionIamRole:
+    Description: Implicit IAM Role created for Hello World function
+    Value:
+      Fn::GetAtt:
+      - PunchFunction
+      - Arn
